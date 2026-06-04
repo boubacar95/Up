@@ -1,141 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CV — Boubacar Drame</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Arial', sans-serif;
-      font-size: 11px;
+      font-family: 'Inter', 'Arial', sans-serif;
+      font-size: 10.5px;
       color: #1a1a1a;
       background: #fff;
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 36px 40px;
-      line-height: 1.5;
+      padding: 32px 44px;
+      line-height: 1.35;
     }
 
-    /* EN-TÊTE */
+    /* ── EN-TÊTE ── */
     header {
-      border-bottom: 2px solid #1a56db;
-      padding-bottom: 12px;
-      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid #1a56db;
+      margin-bottom: 14px;
     }
-    header h1 {
-      font-size: 22px;
+    .header-left h1 {
+      font-size: 24px;
       font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: 0.5px;
+      color: #0f172a;
+      letter-spacing: -0.3px;
     }
-    header h2 {
-      font-size: 13px;
+    .header-left h2 {
+      font-size: 12px;
       font-weight: 400;
       color: #1a56db;
       margin-top: 2px;
+      letter-spacing: 0.3px;
     }
-    .contact-line {
-      margin-top: 8px;
-      font-size: 10.5px;
-      color: #444;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .contact-line span { white-space: nowrap; }
-
-    /* SECTIONS */
-    section { margin-bottom: 16px; }
-    section h3 {
-      font-size: 11.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #1a56db;
-      border-bottom: 1px solid #d1d5db;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
-    }
-
-    /* RÉSUMÉ */
-    .resume-summary {
-      font-size: 11px;
-      color: #333;
+    .header-right {
+      text-align: right;
+      font-size: 10px;
+      color: #555;
       line-height: 1.6;
     }
+    .header-right a { color: #1a56db; text-decoration: none; }
 
-    /* EXPÉRIENCE */
-    .exp-block { margin-bottom: 12px; }
+    /* ── SECTION TITRE ── */
+    section { margin-bottom: 12px; }
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #1a56db;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
+    }
+
+    /* ── PROFIL ── */
+    .profil {
+      font-size: 10.5px;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    /* ── EXPÉRIENCE ── */
+    .exp-block { margin-bottom: 8px; }
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
     }
     .exp-title {
-      font-weight: 700;
-      font-size: 11.5px;
-      color: #1a1a1a;
+      font-size: 11px;
+      font-weight: 600;
+      color: #0f172a;
     }
     .exp-date {
-      font-size: 10px;
-      color: #555;
+      font-size: 9.5px;
+      color: #6b7280;
       white-space: nowrap;
+      margin-left: 8px;
     }
     .exp-company {
-      font-size: 10.5px;
+      font-size: 10px;
       color: #1a56db;
-      margin-bottom: 4px;
-    }
-    .exp-block ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .exp-block ul li {
-      padding-left: 12px;
-      position: relative;
+      font-weight: 500;
+      margin-top: 1px;
       margin-bottom: 3px;
-      color: #333;
+    }
+    .exp-block ul { list-style: none; }
+    .exp-block ul li {
+      padding-left: 10px;
+      position: relative;
+      color: #374151;
+      margin-bottom: 1.5px;
+      font-size: 10.5px;
     }
     .exp-block ul li::before {
-      content: "▸";
+      content: "–";
       position: absolute;
       left: 0;
-      color: #1a56db;
-      font-size: 9px;
-      top: 1px;
+      color: #94a3b8;
+      font-weight: 300;
     }
 
-    /* COMPÉTENCES */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 24px;
+    /* ── COMPÉTENCES ── */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table td {
+      font-size: 10.5px;
+      padding: 2px 6px 2px 0;
+      vertical-align: top;
+      color: #374151;
+      width: 50%;
     }
-    .skill-row { font-size: 10.5px; color: #333; }
-    .skill-label { font-weight: 700; color: #1a1a1a; }
+    .skills-table td:first-child { padding-right: 20px; }
+    .skill-cat {
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+    }
 
-    /* FORMATION */
-    .edu-block { margin-bottom: 8px; }
+    /* ── FORMATION ── */
+    .edu-block { margin-bottom: 5px; }
     .edu-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
     }
-    .edu-title { font-weight: 700; font-size: 11px; }
-    .edu-date { font-size: 10px; color: #555; }
-    .edu-school { font-size: 10.5px; color: #1a56db; }
+    .edu-title {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .edu-date {
+      font-size: 9.5px;
+      color: #6b7280;
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+    .edu-school {
+      font-size: 10px;
+      color: #1a56db;
+      margin-top: 1px;
+    }
 
-    /* LANGUES */
-    .langs { display: flex; gap: 24px; }
-    .lang-item { font-size: 10.5px; }
-    .lang-name { font-weight: 700; }
+    /* ── LANGUES & INTÉRÊTS ── */
+    .inline-row {
+      display: flex;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .lang-item {
+      font-size: 10.5px;
+      color: #374151;
+      margin-right: 20px;
+    }
+    .lang-name { font-weight: 600; color: #0f172a; }
+    .misc { font-size: 10.5px; color: #374151; }
 
-    /* DIVERS */
-    .misc { font-size: 10.5px; color: #444; }
+    /* ── SÉPARATEUR ENTRE BLOCS EXP ── */
+    .exp-block + .exp-block {
+      padding-top: 6px;
+      border-top: 1px dashed #e2e8f0;
+    }
 
     @media print {
-      body { padding: 20px 28px; }
+      body { padding: 20px 32px; }
     }
   </style>
 </head>
@@ -143,38 +180,37 @@
 
   <!-- EN-TÊTE -->
   <header>
-    <h1>Boubacar Drame</h1>
-    <h2>Technicien Réseaux & Support Systèmes</h2>
-    <div class="contact-line">
-      <span>boubacardrame482@gmail.com</span>
-      <span>07 84 70 47 11</span>
-      <span>LinkedIn : Boubacar-Drame</span>
-      <span>Permis B</span>
-      <span>Disponible immédiatement — Télétravail / Présentiel</span>
+    <div class="header-left">
+      <h1>Boubacar Drame</h1>
+      <h2>Technicien Réseaux &amp; Support Systèmes</h2>
+    </div>
+    <div class="header-right">
+      boubacardrame482@gmail.com &nbsp;·&nbsp; 07 84 70 47 11<br>
+      <a href="https://linkedin.com/in/Boubacar-Drame">linkedin.com/in/Boubacar-Drame</a><br>
+      Permis B &nbsp;·&nbsp; Disponible immédiatement &nbsp;·&nbsp; Télétravail / Présentiel
     </div>
   </header>
 
-  <!-- RÉSUMÉ -->
+  <!-- PROFIL -->
   <section>
-    <h3>Profil</h3>
-    <p class="resume-summary">
-      Technicien systèmes et réseaux BAC+2, opérationnel sur le support N1/N2, la gestion des incidents
-      et l'administration Active Directory. Expérience terrain en déploiement de postes, maintenance de
-      parcs informatiques et gestion d'environnements Cloud (GCP, AWS). Recherche un poste de Technicien
-      Réseau ou Support en CDI ou CDD, junior à mid-level.
+    <div class="section-title">Profil</div>
+    <p class="profil">
+      Technicien systèmes et réseaux BAC+2, opérationnel sur le support N1/N2, la gestion des incidents et l'administration Active Directory.
+      Expérience terrain en déploiement de postes, maintenance de parcs informatiques et gestion d'environnements Cloud (GCP, AWS).
+      Disponible immédiatement pour un poste de Technicien Réseau ou Support, junior à mid-level.
     </p>
   </section>
 
-  <!-- EXPÉRIENCE -->
+  <!-- EXPÉRIENCES -->
   <section>
-    <h3>Expériences professionnelles</h3>
+    <div class="section-title">Expériences professionnelles</div>
 
     <div class="exp-block">
       <div class="exp-header">
         <span class="exp-title">Technicien de déploiement</span>
-        <span class="exp-date">Avril 2026 – Mai 2026</span>
+        <span class="exp-date">Avr. 2026 – Mai 2026</span>
       </div>
-      <div class="exp-company">Solfi Consulting — Paris &nbsp;|&nbsp; Mission intérim</div>
+      <div class="exp-company">Solfi Consulting — Paris &nbsp;·&nbsp; Mission intérim</div>
       <ul>
         <li>Déploiement et mise en service de postes de travail au sein des locaux de l'Assurance Maladie, en respectant le planning de migration</li>
         <li>Migration des postes et accompagnement des utilisateurs lors de la prise en main des nouveaux équipements</li>
@@ -184,10 +220,10 @@
 
     <div class="exp-block">
       <div class="exp-header">
-        <span class="exp-title">Technicien Support & Flux Logistiques</span>
-        <span class="exp-date">Janvier 2026 – Mars 2026</span>
+        <span class="exp-title">Technicien Support &amp; Flux Logistiques</span>
+        <span class="exp-date">Jan. 2026 – Mars 2026</span>
       </div>
-      <div class="exp-company">Chronopost — France &nbsp;|&nbsp; Mission intérim</div>
+      <div class="exp-company">Chronopost — France &nbsp;·&nbsp; Mission intérim</div>
       <ul>
         <li>Enregistrement et traitement des données douanières (facturation export/import) sur les logiciels Chronopost</li>
         <li>Diagnostic et résolution d'incidents réseau N1 : connectivité des postes et terminaux de saisie</li>
@@ -198,35 +234,40 @@
     <div class="exp-block">
       <div class="exp-header">
         <span class="exp-title">Stage Technicien Réseau / DevOps</span>
-        <span class="exp-date">Février 2025 – Avril 2025</span>
+        <span class="exp-date">Fév. 2025 – Avr. 2025</span>
       </div>
       <div class="exp-company">Decathlon Digital — Paris</div>
       <ul>
         <li>Identification et résolution d'incidents logiques et physiques, vérification des performances systèmes</li>
         <li>Administration Active Directory : gestion des comptes utilisateurs, attribution des droits d'accès</li>
         <li>Utilisation quotidienne de GCP et AWS pour le déploiement et la gestion des environnements</li>
-        <li>Documentation des procédures techniques et collaboration avec les équipes Dev et Ops</li>
+        <li>Documentation des procédures techniques et collaboration étroite avec les équipes Dev et Ops</li>
       </ul>
     </div>
   </section>
 
   <!-- COMPÉTENCES -->
   <section>
-    <h3>Compétences techniques</h3>
-    <div class="skills-grid">
-      <div class="skill-row"><span class="skill-label">Réseaux :</span> TCP/IP, DHCP, DNS, dépannage N1/N2, surveillance réseau</div>
-      <div class="skill-row"><span class="skill-label">Sécurité :</span> Sécurité réseaux, gestion des accès, pare-feu (notions)</div>
-      <div class="skill-row"><span class="skill-label">Systèmes :</span> Linux, Active Directory, Windows (postes), déploiement de postes</div>
-      <div class="skill-row"><span class="skill-label">Cloud :</span> Google Cloud Platform (GCP), Amazon Web Services (AWS)</div>
-      <div class="skill-row"><span class="skill-label">Outils :</span> Ticketing GLPI, gestion de parc informatique</div>
-      <div class="skill-row"><span class="skill-label">Autres :</span> Création de site web — <a href="https://dramecleanall.ch">dramecleanall.ch</a></div>
-    </div>
+    <div class="section-title">Compétences techniques</div>
+    <table class="skills-table">
+      <tr>
+        <td><span class="skill-cat">Réseaux :</span> TCP/IP, DHCP, DNS, dépannage N1/N2, surveillance réseau</td>
+        <td><span class="skill-cat">Sécurité :</span> Sécurité réseaux, gestion des accès, pare-feu (notions)</td>
+      </tr>
+      <tr>
+        <td><span class="skill-cat">Systèmes :</span> Linux, Active Directory, Windows (postes de travail)</td>
+        <td><span class="skill-cat">Cloud :</span> Google Cloud Platform (GCP), Amazon Web Services (AWS)</td>
+      </tr>
+      <tr>
+        <td><span class="skill-cat">Outils :</span> Ticketing GLPI, déploiement de postes, gestion de parc</td>
+        <td><span class="skill-cat">Web :</span> Création de site — <a href="https://dramecleanall.ch" style="color:#1a56db">dramecleanall.ch</a></td>
+      </tr>
+    </table>
   </section>
 
   <!-- FORMATION -->
   <section>
-    <h3>Formation</h3>
-
+    <div class="section-title">Formation</div>
     <div class="edu-block">
       <div class="edu-header">
         <span class="edu-title">BAC+2 — Technicien Supérieur Systèmes et Réseaux</span>
@@ -234,7 +275,6 @@
       </div>
       <div class="edu-school">Simplon — Aulnay-sous-Bois</div>
     </div>
-
     <div class="edu-block">
       <div class="edu-header">
         <span class="edu-title">Bac Scientifique — Spécialisation Mathématiques Appliquées</span>
@@ -242,7 +282,6 @@
       </div>
       <div class="edu-school">Lycée Jean-Jacques Rousseau — Sarcelles</div>
     </div>
-
     <div class="edu-block">
       <div class="edu-header">
         <span class="edu-title">BAFA — Thème Handicap</span>
@@ -254,8 +293,8 @@
 
   <!-- LANGUES -->
   <section>
-    <h3>Langues</h3>
-    <div class="langs">
+    <div class="section-title">Langues</div>
+    <div class="inline-row">
       <div class="lang-item"><span class="lang-name">Français</span> — Langue maternelle</div>
       <div class="lang-item"><span class="lang-name">Anglais</span> — Niveau B2</div>
       <div class="lang-item"><span class="lang-name">Allemand</span> — Niveau B1</div>
@@ -264,7 +303,7 @@
 
   <!-- CENTRES D'INTÉRÊT -->
   <section>
-    <h3>Centres d'intérêt</h3>
+    <div class="section-title">Centres d'intérêt</div>
     <p class="misc">Football &nbsp;·&nbsp; Boxe thaïlandaise &nbsp;·&nbsp; Lecture &nbsp;·&nbsp; Manga &nbsp;·&nbsp; Voyage</p>
   </section>
 
