@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV — Boubacar Drame</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 36px 40px;
+      line-height: 1.5;
+    }
+
+    /* EN-TÊTE */
+    header {
+      border-bottom: 2px solid #1a56db;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+    }
+    header h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #1a56db;
+      margin-top: 2px;
+    }
+    .contact-line {
+      margin-top: 8px;
+      font-size: 10.5px;
+      color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .contact-line span { white-space: nowrap; }
+
+    /* SECTIONS */
+    section { margin-bottom: 16px; }
+    section h3 {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a56db;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    /* RÉSUMÉ */
+    .resume-summary {
+      font-size: 11px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* EXPÉRIENCE */
+    .exp-block { margin-bottom: 12px; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .exp-title {
+      font-weight: 700;
+      font-size: 11.5px;
+      color: #1a1a1a;
+    }
+    .exp-date {
+      font-size: 10px;
+      color: #555;
+      white-space: nowrap;
+    }
+    .exp-company {
+      font-size: 10.5px;
+      color: #1a56db;
+      margin-bottom: 4px;
+    }
+    .exp-block ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .exp-block ul li {
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 3px;
+      color: #333;
+    }
+    .exp-block ul li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #1a56db;
+      font-size: 9px;
+      top: 1px;
+    }
+
+    /* COMPÉTENCES */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .skill-row { font-size: 10.5px; color: #333; }
+    .skill-label { font-weight: 700; color: #1a1a1a; }
+
+    /* FORMATION */
+    .edu-block { margin-bottom: 8px; }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-title { font-weight: 700; font-size: 11px; }
+    .edu-date { font-size: 10px; color: #555; }
+    .edu-school { font-size: 10.5px; color: #1a56db; }
+
+    /* LANGUES */
+    .langs { display: flex; gap: 24px; }
+    .lang-item { font-size: 10.5px; }
+    .lang-name { font-weight: 700; }
+
+    /* DIVERS */
+    .misc { font-size: 10.5px; color: #444; }
+
+    @media print {
+      body { padding: 20px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <h1>Boubacar Drame</h1>
+    <h2>Technicien Réseaux & Support Systèmes</h2>
+    <div class="contact-line">
+      <span>boubacardrame482@gmail.com</span>
+      <span>07 84 70 47 11</span>
+      <span>LinkedIn : Boubacar-Drame</span>
+      <span>Permis B</span>
+      <span>Disponible immédiatement — Télétravail / Présentiel</span>
+    </div>
+  </header>
+
+  <!-- RÉSUMÉ -->
+  <section>
+    <h3>Profil</h3>
+    <p class="resume-summary">
+      Technicien systèmes et réseaux BAC+2, opérationnel sur le support N1/N2, la gestion des incidents
+      et l'administration Active Directory. Expérience terrain en déploiement de postes, maintenance de
+      parcs informatiques et gestion d'environnements Cloud (GCP, AWS). Recherche un poste de Technicien
+      Réseau ou Support en CDI ou CDD, junior à mid-level.
+    </p>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section>
+    <h3>Expériences professionnelles</h3>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-title">Technicien de déploiement</span>
+        <span class="exp-date">Avril 2026 – Mai 2026</span>
+      </div>
+      <div class="exp-company">Solfi Consulting — Paris &nbsp;|&nbsp; Mission intérim</div>
+      <ul>
+        <li>Déploiement et mise en service de postes de travail au sein des locaux de l'Assurance Maladie, en respectant le planning de migration</li>
+        <li>Migration des postes et accompagnement des utilisateurs lors de la prise en main des nouveaux équipements</li>
+        <li>Diagnostic et résolution d'incidents réseau avec escalade vers le support N2 et suivi des tickets via GLPI</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-title">Technicien Support & Flux Logistiques</span>
+        <span class="exp-date">Janvier 2026 – Mars 2026</span>
+      </div>
+      <div class="exp-company">Chronopost — France &nbsp;|&nbsp; Mission intérim</div>
+      <ul>
+        <li>Enregistrement et traitement des données douanières (facturation export/import) sur les logiciels Chronopost</li>
+        <li>Diagnostic et résolution d'incidents réseau N1 : connectivité des postes et terminaux de saisie</li>
+        <li>Maintenance préventive et curative du parc d'impression thermique et laser en environnement critique</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-title">Stage Technicien Réseau / DevOps</span>
+        <span class="exp-date">Février 2025 – Avril 2025</span>
+      </div>
+      <div class="exp-company">Decathlon Digital — Paris</div>
+      <ul>
+        <li>Identification et résolution d'incidents logiques et physiques, vérification des performances systèmes</li>
+        <li>Administration Active Directory : gestion des comptes utilisateurs, attribution des droits d'accès</li>
+        <li>Utilisation quotidienne de GCP et AWS pour le déploiement et la gestion des environnements</li>
+        <li>Documentation des procédures techniques et collaboration avec les équipes Dev et Ops</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section>
+    <h3>Compétences techniques</h3>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="skill-label">Réseaux :</span> TCP/IP, DHCP, DNS, dépannage N1/N2, surveillance réseau</div>
+      <div class="skill-row"><span class="skill-label">Sécurité :</span> Sécurité réseaux, gestion des accès, pare-feu (notions)</div>
+      <div class="skill-row"><span class="skill-label">Systèmes :</span> Linux, Active Directory, Windows (postes), déploiement de postes</div>
+      <div class="skill-row"><span class="skill-label">Cloud :</span> Google Cloud Platform (GCP), Amazon Web Services (AWS)</div>
+      <div class="skill-row"><span class="skill-label">Outils :</span> Ticketing GLPI, gestion de parc informatique</div>
+      <div class="skill-row"><span class="skill-label">Autres :</span> Création de site web — <a href="https://dramecleanall.ch">dramecleanall.ch</a></div>
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section>
+    <h3>Formation</h3>
+
+    <div class="edu-block">
+      <div class="edu-header">
+        <span class="edu-title">BAC+2 — Technicien Supérieur Systèmes et Réseaux</span>
+        <span class="edu-date">Oct. 2024 – Juin 2025</span>
+      </div>
+      <div class="edu-school">Simplon — Aulnay-sous-Bois</div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-header">
+        <span class="edu-title">Bac Scientifique — Spécialisation Mathématiques Appliquées</span>
+        <span class="edu-date">2018 – 2022</span>
+      </div>
+      <div class="edu-school">Lycée Jean-Jacques Rousseau — Sarcelles</div>
+    </div>
+
+    <div class="edu-block">
+      <div class="edu-header">
+        <span class="edu-title">BAFA — Thème Handicap</span>
+        <span class="edu-date">Oct. 2019 – Avr. 2021</span>
+      </div>
+      <div class="edu-school">Aroeven — Paris</div>
+    </div>
+  </section>
+
+  <!-- LANGUES -->
+  <section>
+    <h3>Langues</h3>
+    <div class="langs">
+      <div class="lang-item"><span class="lang-name">Français</span> — Langue maternelle</div>
+      <div class="lang-item"><span class="lang-name">Anglais</span> — Niveau B2</div>
+      <div class="lang-item"><span class="lang-name">Allemand</span> — Niveau B1</div>
+    </div>
+  </section>
+
+  <!-- CENTRES D'INTÉRÊT -->
+  <section>
+    <h3>Centres d'intérêt</h3>
+    <p class="misc">Football &nbsp;·&nbsp; Boxe thaïlandaise &nbsp;·&nbsp; Lecture &nbsp;·&nbsp; Manga &nbsp;·&nbsp; Voyage</p>
+  </section>
+
+</body>
+</html>
